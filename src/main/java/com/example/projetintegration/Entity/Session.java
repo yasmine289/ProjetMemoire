@@ -20,6 +20,10 @@ public class Session {
     @ManyToOne
     @JoinColumn(name = "formateur_id")
     private Formateur formateur;
+    @ManyToOne
+    @JoinColumn(name = "coordinateur_id")
+    private Coordinateur coordinateur;
+
 
 
     public Long getIdSession() {
@@ -93,4 +97,5 @@ public class Session {
     public void setFormateur(Formateur formateur) {
         this.formateur = formateur;
     }
+
 }
