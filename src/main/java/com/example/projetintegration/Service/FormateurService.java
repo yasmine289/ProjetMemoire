@@ -27,12 +27,7 @@ public class FormateurService {
     public Formateur modifierFormateur(Long id, Formateur nouveau) {
         Formateur f = formateurRepository.findById(id).orElse(null);
         if (f != null) {
-            f.setNom(nouveau.getNom());
-            f.setPrenom(nouveau.getPrenom());
             f.setEmail(nouveau.getEmail());
-            f.setCin(nouveau.getCin());
-            f.setBanque(nouveau.getBanque());
-            f.setRib(nouveau.getRib());
             f.setPassword(nouveau.getPassword());
             return formateurRepository.save(f);
         }
